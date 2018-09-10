@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+//The request message containing numbers to be added and the result
+message Numbers {
+    int32 Num1 = 1;
+    int32 Num2 = 2;
+}
+
+// The response message containing the numbers and the calculated result
+message Result {
+  int32 sum = 1;
+}
+
+// The service definition
+service Calculator {
+    rpc Add (Numbers) returns (Result) {}
+}
+
+
+
+
+
